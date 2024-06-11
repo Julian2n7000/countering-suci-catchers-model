@@ -33,6 +33,61 @@ my %ORACLES = (
       qr/!KD\( f5\(/
    ],
 
+   executability_keyConf_honest => [
+      qr/!KU\( ~k/,
+      qr/St_4_SEAF\(/,
+      qr/RcvS\(/,
+      qr/Sqn_HSS\(/,
+      qr/!KU\( f1\(KDF\(KDF\(<f3/,
+      qr/!KU\( f1\(~k/,
+      qr/!KU\( KDF\(KDF\(<f3/,
+      qr/!KU\( KDF\(<f3/,
+      qr/!KU\( f3\(/,
+      qr/Sqn_UE\(/,
+      qr/!KU\( f5\(~k/,
+      qr/!KU\( ~sqn_root/,
+      qr/!KU\( \(f5\(~k/,
+      qr/!KD\( f5\(/
+   ],
+
+   executability_desync => [
+      qr/!KU\( ~k/,
+      qr/!KU\( ~sqn_root/,
+      qr/St_1_HSS\(/,
+      qr/Sqn_HSS\(/,
+      qr/Sqn_UE\(/,
+      qr/RcvS\(/,
+      qr/HSUPI_HSS\(/,
+      qr/HSUPI_UE\(/,
+      qr/!KU\( f1_star\(/,
+      qr/!KU\( f1\(/,
+      qr/!KU\( f5\(/
+   ],
+
+   executability_resync => [
+      qr/!KU\( ~k \)/,
+      qr/!KU\( ~sqn_root/,
+      qr/\d =.*=/,
+      qr/~~>/,
+      qr/HSS_Resync_End\(/,
+      qr/St_1_HSS\(/,
+      qr/Sqn_HSS\(/,
+      qr/Sqn_UE\(/,
+      qr/RcvS\(/,
+      qr/HSUPI_HSS\(/,
+      qr/!KU\( KDF\(/,
+      qr/!KU\( f1\(~k/,
+      qr/!KU\( f3\(~k/,
+      qr/!KU\( f1_star\(/,
+      qr/!KU\( f1\(/,
+      qr/!KU\( f5\(/,
+      qr/!KU\( \(f5_star\(/,
+      qr/!KD\( \(f5_star\(/,
+      qr/!KU\( \(f5\(/,
+      qr/!KD\( \(f5\(/,
+      qr/!KU\( f3\(/
+   ],
+
    ue_hsupi_unchanged => [
       qr/\(last\(#i/,
       qr/!Ltk_Sym\(/,

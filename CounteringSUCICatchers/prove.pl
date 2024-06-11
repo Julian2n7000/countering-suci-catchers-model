@@ -21,16 +21,19 @@ my @LEMMAS = (
 
    # Existing executability lemmas
    { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'executability_honest',         args => "--heuristic=O --oraclename=$SRC/5G_AKA_with_hsupi.pl" },
-   # { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'executability_keyConf_honest', args => "--heuristic=i",                                       timeout => 20*60 }, # No oracle provided by the original implementation
-   { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'executability_desync',         args => "--heuristic=O --oraclename=$SRC/5G_AKA.oracle",       timeout => 20*60 },
-   # { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'executability_resync',         args => "--heuristic=O --oraclename=$SRC/5G_AKA.oracle",       timeout => 20*60 },
+   { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'executability_keyConf_honest', args => "--heuristic=O --oraclename=$SRC/5G_AKA_with_hsupi.pl" },
+   { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'executability_desync',         args => "--heuristic=O --oraclename=$SRC/5G_AKA_with_hsupi.pl" },
+   # Times out
+   # { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'executability_resync',         args => "--heuristic=O --oraclename=$SRC/5G_AKA_with_hsupi.pl", timeout => 60*60 },
 
    # Existing agreement lemmas
-   # { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'injectiveagreement_ue_seaf_kseaf_keyConf_noKeyRev_noChanRev', args => "--heuristic=O --oraclename=$SRC/5G_AKA.oracle", timeout => 20*60 },
-   # { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'injectiveagreement_seaf_ue_kseaf_noKeyRev_noChanRev',         args => "--heuristic=O --oraclename=$SRC/5G_AKA.oracle", timeout => 20*60 },
-   # { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'injectiveagreement_seaf_ue_kseaf_keyConf_noKeyRev_noChanRev', args => "--heuristic=O --oraclename=$SRC/5G_AKA.oracle", timeout => 20*60 },
+   #
+   # (Other lemmas e.g. weak agreement are marked as failling in the original model.)
+   { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'injectiveagreement_ue_seaf_kseaf_keyConf_noKeyRev_noChanRev', args => "--heuristic=O --oraclename=$SRC/5G_AKA.oracle", timeout => 60*60 },
+   { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'injectiveagreement_seaf_ue_kseaf_noKeyRev_noChanRev',         args => "--heuristic=O --oraclename=$SRC/5G_AKA.oracle", timeout => 60*60 },
+   { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'injectiveagreement_seaf_ue_kseaf_keyConf_noKeyRev_noChanRev', args => "--heuristic=O --oraclename=$SRC/5G_AKA.oracle", timeout => 60*60 },
 
-   # Existing hSUPI lemmas
+   # hSUPI lemmas
    { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'ue_hsupi_unchanged', args => "--heuristic=O --oraclename=$SRC/5G_AKA_with_hsupi.pl" },
    { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'hn_hsupi_unchanged', args => "--heuristic=O --oraclename=$SRC/5G_AKA_with_hsupi.pl" },
    { theory => "$SRC/5G_AKA_with_hsupi.spthy", lemma => 'ue_hsupi_update',    args => "--heuristic=O --oraclename=$SRC/5G_AKA_with_hsupi.pl" },

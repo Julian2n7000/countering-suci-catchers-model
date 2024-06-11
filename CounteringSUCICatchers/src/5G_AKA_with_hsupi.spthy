@@ -1,5 +1,12 @@
 theory 5G_aka
 
+// 5G-AKA with hSUPI
+//
+// Model for the paper "Countering SUCI-Catchers in Cellular Communications" by
+// Julian Parkin and Mahesh Tripunitara.
+//
+// Adapted from the original model described below.
+
 /*
 
    Protocol:   5G AKA
