@@ -5,7 +5,9 @@ theory 5G_aka
 // Model for the paper "Countering SUCI-Catchers in Cellular Communications" by
 // Julian Parkin and Mahesh Tripunitara.
 //
-// Adapted from the original model described below.
+// Adapted from the original model described below, which was released under
+// the GNU General Public Licence v3.0 as part of Tamarin. For a copy of the
+// licence, see GPL_V3.txt in this repository.
 
 /*
 

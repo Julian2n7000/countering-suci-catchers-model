@@ -1,5 +1,25 @@
 #!/usr/bin/env perl
 
+# Copyright (c) 2024 Julian Parkin and Mahesh Tripunitara
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
 use 5.010;
 use strict;
 use warnings;
@@ -8,10 +28,10 @@ my %ORACLES = (
    sqn_ue_nodecrease => [
       qr/\(last\(#j/,
       qr/Sqn_UE_Change\(/,
-      qr/\(#vr < #i\)/,
-      qr/Sqn_UE\(.*count\.1/,
       qr/Sqn_UE_Nochange\(/,
-      qr/Sqn_UE\(.*count/
+      qr/dif\. /,
+      qr/dif\.\d\. /,
+      qr/Sqn_UE\(/
    ],
 
    executability_honest => [
@@ -78,6 +98,8 @@ my %ORACLES = (
       qr/!KU\( KDF\(/,
       qr/!KU\( f1\(~k/,
       qr/!KU\( f3\(~k/,
+      qr/HSUPI_UE\(.*hsupi \)/,
+      qr/HSUPI_UE\(.*h\(~hsupi_init\)/,
       qr/!KU\( f1_star\(/,
       qr/!KU\( f1\(/,
       qr/!KU\( f5\(/,
